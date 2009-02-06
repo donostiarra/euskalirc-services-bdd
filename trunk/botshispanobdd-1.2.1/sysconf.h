@@ -3,12 +3,11 @@
  * to it will be erased next time "configure" is run.
  */
 
-#define SERVICES_BIN		"/home/tasio/irc/services/services"
-#define SERVICES_DIR		"/home/tasio/irc/services/lib"
+#define SERVICES_BIN		"/home/donostiarra/euskalbots/services"
+#define SERVICES_DIR		"/home/donostiarra/euskalbots"
 
-#define RUNGROUP		"tasio"
+#define RUNGROUP		"donostiarra"
 #define DEFUMASK		007
-#define NETWORK_DOMAIN		"tasio.net"
 
 #define IRC_UNDERNET
 #define IRC_UNDERNET_P09
@@ -25,7 +24,7 @@ typedef unsigned int uint32;
 
 #define HAVE_STRINGS_H		1
 #define HAVE_SYS_SELECT_H	1
-#define HAVE_SYS_SYSPROTO_H	1
+#define HAVE_SYS_SYSPROTO_H	0
 
 #define HAVE_STRERROR		1
 #define HAVE_SYS_ERRLIST	0
