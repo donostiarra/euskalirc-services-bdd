@@ -3,11 +3,12 @@
  * to it will be erased next time "configure" is run.
  */
 
-#define SERVICES_BIN		"/home/donostiarra/euskalbots/services"
-#define SERVICES_DIR		"/home/donostiarra/euskalbots"
+#define SERVICES_BIN		"/home/donostiarra/ircd/servicios/services"
+#define SERVICES_DIR		"/home/donostiarra/ircd/servicios"
 
 #define RUNGROUP		"donostiarra"
 #define DEFUMASK		007
+#define NETWORK_DOMAIN		"euskalirc.tk"
 
 #define IRC_UNDERNET
 #define IRC_UNDERNET_P09
