@@ -3182,11 +3182,11 @@ MEMO_SERVADMIN_HELP_INFO
 
 IPV_HELP
 	Comandos de 4%S:
-	  
+	
+	    12ACTIVAR      Activa Tu Ip Virtual Personalizada Con Colores (Solo Admins)
 	    12CAMBIAR      Activa Tu Ip Virtual Personalizada
 	    12PONER        Inserta Frases Personalizadas en una Agenda  
-	    12ACTIVAR      Activa la Ip Virtual Personalizada Con Colores (Solo Admins)
-	    12SET          Activa  IpVirtual  de otros semi-personalizada (Solo Admins)
+	    12SET          Activa  IpVirtual  semi-personalizada 
 	    12HELP         La Ayuda del Comando
 
 IPV_HELP_ACTIVAR
