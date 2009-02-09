@@ -1,0 +1,33 @@
+telnet localhost [port] <---ej) telnet 127.0.0.1 4400
+
+
+PASS lapass-del-link  <---tener en cuenta si es encriptada (recomendado desactivar al principio en la configuracion del ircd)
+
+
+
+SERVER deep.space 1 1267253624 1267253624 J10 Q]] :Servicios Primarios
+Q DB * 1 z p09:deep.space 50
+Q DB * 2 z clave.de.cifrado.de.ips [Ristra-De-Letras-y-Numeros]
+Q DB * 3  z auto.invisible off  <--- para que los usuarios no entren con el flag +i
+Q DB * 4 z numero.maximo.de.clones.por.defecto 4
+Q DB * 5  z activar.ident on <-- se activa
+Q DB * 6  z nicklen 15  <--- si queremos cambiar el de por defecto que es 9
+
+salir del telnet
+
+NOTA
+-----
+*[Ristra-De-Letras-y-Numeros] 
+Es una secuencia de letras y numeros que sirve de clave para cifrar las ips 
+Es un Dato que no debe ser revelado
+ejemplo) GfDsRSzZ56124BNmHM
+
+en el ircd
+-----------
+
+como ircop global /stats b --> y ver si se han escrito los 6 registros en la tabla "z"
+
+
+Si al menos se ha escrito el primero,podras linkar los services (los hemos llamado deep.space)
+
+
