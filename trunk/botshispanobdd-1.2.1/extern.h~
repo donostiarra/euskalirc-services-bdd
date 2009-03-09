@@ -81,10 +81,8 @@ E int check_access(User *user, ChannelInfo *ci, int what);
 E void registros(User *u, NickInfo *ni);
 E void join_chanserv();
 E void join_shadow();
-E int registra_con_creg(User *u, NickInfo *ni, const char *chan, const char *pass, const char *desc);
-E int suspende_con_creg(User *u, NickInfo *ni, const char *chan, const char *desc);
-/**** cregserv.c ****/
 
+/**** cregserv.c ****/
 E void cr_init(void);
 E void cregserv(const char *source, char *buf);
 E void load_cr_dbase(void);
@@ -92,6 +90,10 @@ E void save_cr_dbase(void);
 E void get_cregserv_stats(long *nrec, long *memuse);
 E CregInfo *cr_findcreg(const char *chan);
 E void expire_chans(void);
+E int registra_con_creg(User *u, NickInfo *ni, const char *chan, const char *pass, const char *desc);
+E int suspende_con_creg(User *u, const char *chan, const char *desc);
+E int reactiva_con_creg(User *u, const char *chan);
+E int dropado_con_creg(User *u, const char *chan);
 
 /**** compat.c ****/
 
@@ -136,9 +138,15 @@ E int   ServerNumerico;
 E char *ServerHUB;
 E char *ServerDesc;
 E char *ServiceUser;
+E char *ServiceUserSpam;
 E char *ServiceHost;
+E char *ServiceHostSpam;
+E char *ServiceUserEuskalIRC;
+E char *ServiceHostEuskalIRC;
+
 E char *OperHost;
 E char *AdminHost;
+E char *CoAdminHost;
 E char *DevelHost;
 E char *PatrocinaHost;
 E char *s_NickServ;
@@ -152,7 +160,7 @@ E char *s_EuskalIRCServ;
 E char *s_GlobalNoticer;
 E char *s_NewsServ;
 E char *s_IrcIIHelp;
-E char *s_DevNull;
+E char *s_mIRCHelp;
 E char *s_BddServ;
 E char *s_ShadowServ;
 E char *s_IpVirtual;
@@ -172,7 +180,7 @@ E char s_EuskalIRCServP10[4];
 E char s_GlobalNoticerP10[4];
 E char s_NewsServP10[4];
 E char s_IrcIIHelpP10[4];
-E char s_DevNullP10[4];
+E char s_mIRCHelpP10[4];
 #endif
 E char *desc_NickServ;
 E char *desc_ChanServ;
@@ -185,7 +193,7 @@ E char *desc_EuskalIRCServ;
 E char *desc_GlobalNoticer;
 E char *desc_NewsServ;
 E char *desc_IrcIIHelp;
-E char *desc_DevNull;
+E char *desc_mIRCHelp;
 E char *desc_ShadowServ;
 E char *desc_BddServ;
 E char *desc_IpVirtual;
@@ -223,7 +231,7 @@ E int   ReadTimeout;
 E int   WarningTimeout;
 E int   TimeoutCheck;
 
-#define PNAME "ircservices+UpWorld+BDD 41.2.1"
+#define PNAME "euskalirc-services-bdd"
 
 E int   NSForceNickChange; 
 E char *NSGuestNickPrefix;
@@ -268,6 +276,8 @@ E int   MSNotifyAll;
 E char *CanalAdmins;
 E char *CanalOpers;
 E char *CanalCybers;
+E char *CanalAyuda;
+E char *CanalSpamers;;
 E char *ServicesRoot;
 E int   LogMaxUsers;
 E int   AutokillExpiry;
@@ -286,11 +296,10 @@ E int enviar_correo(const char * destino, const char *subject, const char *body)
 E void helpserv(const char *whoami, const char *source, char *buf);
 
 /**** euskalirc.c ****/
-E void do_euskal(User *u);
 E void euskalserv(const char *source, char *buf);
 E void mirar_nick(void);
 E void mirar_pregunta(const char *source, char *buf[BUFSIZE]);
-
+E void do_euskal(User *u);
 /**** init.c ****/
 
 E void introduce_user(const char *user);
