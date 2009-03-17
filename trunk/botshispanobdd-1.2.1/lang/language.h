@@ -877,5 +877,9 @@
 #define BDD_TOCAR_SYNTAX                 876
 #define BDD_ERR_TABLE                    877
 #define BDD_SEQ_OK                       878
+#define EUSKALIRC_HELP_DUDA	 879
+#define EUSKALIRC_FALTA_NICK	 880
+#define EUSKALIRC_MENSAJE_ENTRADA	 881
+#define EUSKALIRC_MENSAJE_NOREG	882
 
-#define NUM_STRINGS 879
+#define NUM_STRINGS 883
