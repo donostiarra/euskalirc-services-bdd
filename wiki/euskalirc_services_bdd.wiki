@@ -18,5 +18,6 @@ Se añade ipvirtual ,descentralizandolo del nickserv
 Se añade EuskalIRC como bot auxiliar ,e informativo que tramita dudas de 
 los usuarios.
 Se pueden fijar  los nuevos modos de canal del (u2.10.H.10.13) +C,+N,+u
-por mlock en Chan.
-y un Nuevo Bot de ayuda mIRC con mensajes de ayuda basicos en castellano.
+por mlock en Chan.Un Nuevo Bot de ayuda mIRC con mensajes de ayuda básicos en castellano, y un Bot de Juegos GAME .
+Hay Nuevas directivas en example.conf para personalizar los servicios acomodandolo a la carta ,de un servidor-red ircu bdd.
+A partir de la versión 25 ,el proyecto es también trasladado a sourceforge,conservando el historial de google,y desde entonces,todos los cambios que venían realizandose por admin.euskalirc pasan a ser llevados a cabo por el mismo autor pero con el alias donostiarra Se destaca el comienzo de una nueva línea de adaptación conocida como ifdef IRC_PATCHS_P09. Así mismo,un nuevo Bot de Estadísticas Stats,y mensajes automáticos para los no registrados.
